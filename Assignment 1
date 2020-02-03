@@ -1,0 +1,51 @@
+public class Employee {
+    private int id ;
+    private String firstName;
+    private String lastName ;
+    private int salary ;
+    //the constructor .
+    public Employee (int id, String firstName,String lastName,int salary){
+        this.id=id  ;
+         this.firstName=firstName;
+        this.lastName=lastName;
+        this.salary=salary;
+    }
+    //the getters
+    public  int getID(){
+        return id;
+    }
+
+    public int getSalary(){
+        return salary;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getName(){
+        return firstName+lastName ;
+    }
+    //the setters
+    public void setSalary(int salary){
+        this.salary=salary;
+    }
+
+    public int getAnnualSalary(){
+        return salary*12;
+    }
+    public int raiseSalary(int percent){
+        //assuming that we pass the percentage as parameter to the method.
+        salary=salary+salary*(percent/100);
+        return salary;
+    }
+    public String toString(){
+        String informations=+id+","+firstName+" "+lastName +"," +salary;
+    return informations;
+    }
+
+}
